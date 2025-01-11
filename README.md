@@ -6,8 +6,8 @@ TWNIC's implementation of RPZ is an effective DNS-based defense mechanism that s
 ### RPZ controversy
 TL;DR: Taiwan's website blocking system, especially "RPZ 1.5" is controversial. It allows quick blocking without court approval, lacks transparency, and has a history of errors (it used to block eu.org, Polymarket.com and Instagram.com), raising concerns about potential abuse and the restriction of digital rights. The new law further legitimizes this process, sparking fears of unchecked government power online.
 #### More info about it:
-- <https://blog.ocf.tw/2024/10/ocf_14.html> [Wayback machine](https://web.archive.org/web/2/https://blog.ocf.tw/2024/10/ocf_14.html)
-- <https://www.facebook.com/seadog007/posts/pfbid02K7KwLyrchHEoWEVbG4bxQCxnLq81Dj6f4ig9Qt5nbGWsgj3zsfXqc9EATgvwo8CUl> [Wayback machine](https://web.archive.org/web/20230607001325/https://www.facebook.com/seadog007/posts/pfbid02K7KwLyrchHEoWEVbG4bxQCxnLq81Dj6f4ig9Qt5nbGWsgj3zsfXqc9EATgvwo8CUl)
+- <https://blog.ocf.tw/2024/10/ocf_14.html> ([Wayback machine](https://web.archive.org/web/2/https://blog.ocf.tw/2024/10/ocf_14.html))
+- <https://www.facebook.com/seadog007/posts/pfbid02K7KwLyrchHEoWEVbG4bxQCxnLq81Dj6f4ig9Qt5nbGWsgj3zsfXqc9EATgvwo8CUl> ([Wayback machine](https://web.archive.org/web/20230607001325/https://www.facebook.com/seadog007/posts/pfbid02K7KwLyrchHEoWEVbG4bxQCxnLq81Dj6f4ig9Qt5nbGWsgj3zsfXqc9EATgvwo8CUl))
 ### Okay, so how it works??
 RPZ only effect Taiwanese DNS (Maybe), like Quad 101 (101.101.101.101) or HiNet DNS (168.95.1.1). And Quad 101 have a additional record if the domain is blocked by RPZ, so we check if there have the keyword like "rpz" or "rpztw" to check if the domains is blocked by RPZ.
 ## Download RPZ block list
