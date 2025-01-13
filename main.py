@@ -2,7 +2,7 @@ import dns.resolver
 import time
 from threading import Timer
 
-def query_domains(input_file, output_file, dns_server, keywords, retry_delay=5):
+def query_domains(input_file, output_file, dns_server, keywords, retry_delay, max_retries):
     resolver = dns.resolver.Resolver()
     resolver.nameservers = [dns_server]
     resolver.timeout = 5
@@ -31,7 +31,7 @@ def query_domains(input_file, output_file, dns_server, keywords, retry_delay=5):
         success = False
         attempts = 0
 
-        while not success:
+        while not success and attempts < max_retries:  # Add a condition to limit retries
             attempts += 1
             try:
                 response = resolver.resolve(domain, 'A', raise_on_no_answer=False)
@@ -52,7 +52,11 @@ def query_domains(input_file, output_file, dns_server, keywords, retry_delay=5):
                 success = True
             except dns.resolver.Timeout:
                 print(f"[Timeout] Retrying domain: {domain} (Attempt {attempts})")
-                time.sleep(retry_delay)
+                if attempts < max_retries:
+                  time.sleep(retry_delay)
+                else:
+                  print(f"[Timeout] Max retries reached for domain: {domain}, Checked: {index}/{total_domains}. Skipping...")
+                  success = True  # Set success to True to break the loop after max retries
             except dns.exception.DNSException as e:
                 print(f"[Error] Failed to query domain: {domain}, Error: {e}, Checked: {index}/{total_domains}")
                 success = True
@@ -75,5 +79,7 @@ input_file = 'domains.txt'
 output_file = 'matching_domains.txt'
 dns_server = '101.101.101.101'
 keywords = ['rpztw', 'rpz']
+retry_delay=5
+max_retries=3
 
-query_domains(input_file, output_file, dns_server, keywords)
+query_domains(input_file, output_file, dns_server, keywords, retry_delay, max_retries)
