@@ -10,7 +10,7 @@ TL;DR: Taiwan's website blocking system, especially "RPZ 1.5" is controversial. 
 - <https://www.facebook.com/seadog007/posts/pfbid02K7KwLyrchHEoWEVbG4bxQCxnLq81Dj6f4ig9Qt5nbGWsgj3zsfXqc9EATgvwo8CUl> ([Wayback machine](https://web.archive.org/web/20230607001325/https://www.facebook.com/seadog007/posts/pfbid02K7KwLyrchHEoWEVbG4bxQCxnLq81Dj6f4ig9Qt5nbGWsgj3zsfXqc9EATgvwo8CUl))
 ## Download RPZ Block List
 [rpz-block-list.txt](https://github.com/MagicTeaMC/rpz-detector/blob/main/rpz-block-list.txt)
-## Setup
+## Start Using
 ### Python Script
 1. Create a venv and install requirements.
 2. Clone domains list [here](https://github.com/tb0hdan/domains), and merge it with `merge_datas.py` 
@@ -23,3 +23,7 @@ TL;DR: Taiwan's website blocking system, especially "RPZ 1.5" is controversial. 
 3. Install [massdns](https://github.com/blechschmidt/massdns)
 4. Run `massdns -r resolvers.txt -t A -o S -w results.txt domains.txt`
 4. Use `massdns2list.py` to format the list
+## Other Domains source
+- Worldwide (except .ru): <https://ipsniper.info/domaincount.html>, <https://github.com/tb0hdan/domains>
+- .RU: <https://github.com/2naive/top_ru_domains_nameservers_list/blob/main/ru_alexa_top1m.txt>
+- Top 17m list: <https://github.com/lkarlslund/topdomains>
