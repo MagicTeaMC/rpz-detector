@@ -163,4 +163,5 @@ cython_debug/
 
 domains.txt
 matching_domains.txt
+results.txt
 .DS_Store
