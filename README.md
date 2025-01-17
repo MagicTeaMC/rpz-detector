@@ -9,7 +9,7 @@ TL;DR: Taiwan's website blocking system, especially "RPZ 1.5" is controversial. 
 - <https://blog.ocf.tw/2024/10/ocf_14.html> ([Wayback machine](https://web.archive.org/web/2/https://blog.ocf.tw/2024/10/ocf_14.html))
 - <https://www.facebook.com/seadog007/posts/pfbid02K7KwLyrchHEoWEVbG4bxQCxnLq81Dj6f4ig9Qt5nbGWsgj3zsfXqc9EATgvwo8CUl> ([Wayback machine](https://web.archive.org/web/20230607001325/https://www.facebook.com/seadog007/posts/pfbid02K7KwLyrchHEoWEVbG4bxQCxnLq81Dj6f4ig9Qt5nbGWsgj3zsfXqc9EATgvwo8CUl))
 ## Download RPZ Block List
-Not yet, but you can make it yourself with steps below
+[rpz-block-list.txt](https://github.com/MagicTeaMC/rpz-detector/blob/main/rpz-block-list.txt)
 ## Setup
 ### Python Script
 1. Create a venv and install requirements.
