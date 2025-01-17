@@ -1,4 +1,5 @@
 google.com
-polymarket.com
+github.com
+twnic.tw
 chinaq.cc
-yahoo.com
+vk.com
