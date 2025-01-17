@@ -24,6 +24,6 @@ TL;DR: Taiwan's website blocking system, especially "RPZ 1.5" is controversial. 
 4. Run `massdns -r resolvers.txt -t A -o S -w results.txt domains.txt`
 4. Use `massdns2list.py` to format the list
 ## Domains source
-- Worldwide (except .ru): <https://ipsniper.info/domaincount.html>, <https://github.com/tb0hdan/domains>
+- Worldwide: <https://ipsniper.info/domaincount.html>, <https://github.com/tb0hdan/domains> (except .ru)
 - .RU: <https://github.com/2naive/top_ru_domains_nameservers_list/blob/main/ru_alexa_top1m.txt>
 - Top 17m list: <https://github.com/lkarlslund/topdomains>
