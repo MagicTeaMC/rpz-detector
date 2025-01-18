@@ -1,6 +1,7 @@
 import glob
 import os
 
+
 def merge_datas(data_path="domains/data/", output_filename="domains.txt"):
     """
     Merges all .txt files found in the specified directory patterns within the given data_path:
@@ -16,8 +17,8 @@ def merge_datas(data_path="domains/data/", output_filename="domains.txt"):
     # Create a list of file paths matching the patterns, using the provided data_path
     file_patterns = [
         os.path.join(data_path, "*/*.txt"),  # data_path/*/*.txt
-        os.path.join(data_path, "*.txt"),    # data_path/*.txt
-        os.path.join(data_path, "*/*/*.txt")   # data_path/*/*/*.txt
+        os.path.join(data_path, "*.txt"),  # data_path/*.txt
+        os.path.join(data_path, "*/*/*.txt"),  # data_path/*/*/*.txt
     ]
     file_paths = []
     for pattern in file_patterns:
@@ -34,7 +35,9 @@ def merge_datas(data_path="domains/data/", output_filename="domains.txt"):
             try:
                 with open(file_path, "r", encoding="utf-8") as infile:
                     outfile.write(infile.read())
-                    outfile.write("\n")  # Add a newline to separate content from different files
+                    outfile.write(
+                        "\n"
+                    )  # Add a newline to separate content from different files
                 print(f"Merged: {file_path}")
             except UnicodeDecodeError:
                 print(f"Skipped file (likely binary): {file_path}")
@@ -42,6 +45,7 @@ def merge_datas(data_path="domains/data/", output_filename="domains.txt"):
                 print(f"File not found: {file_path}")
 
     print(f"Successfully merged files into: {output_filename}")
+
 
 if __name__ == "__main__":
     merge_datas()

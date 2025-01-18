@@ -7,6 +7,7 @@ This is a experimental scripts made for discover more method to check if the dom
 check if it include somethings in additional section and not a knew IP usually use by RPZ.
 """
 
+
 def find_domains_with_additional_section(domains_file, dns_server, target_ip):
     resolver = dns.resolver.Resolver()
     resolver.nameservers = [dns_server]
@@ -16,11 +17,15 @@ def find_domains_with_additional_section(domains_file, dns_server, target_ip):
         for domain in f:
             domain = domain.strip()
             try:
-                a_records = resolver.resolve(domain, 'A')
+                a_records = resolver.resolve(domain, "A")
                 domain_ips = [str(rdata) for rdata in a_records]
 
                 try:
-                    response = dns.query.udp(dns.message.make_query(domain, dns.rdatatype.A), dns_server, timeout=5)
+                    response = dns.query.udp(
+                        dns.message.make_query(domain, dns.rdatatype.A),
+                        dns_server,
+                        timeout=5,
+                    )
                     if response.additional:
                         has_additional = True
                         additional_ips = []
@@ -29,15 +34,22 @@ def find_domains_with_additional_section(domains_file, dns_server, target_ip):
                                 if rr.rdtype == dns.rdatatype.A:
                                     additional_ips.append(str(rr))
 
-                        if not any(ip == target_ip for ip in additional_ips) and target_ip not in domain_ips :
-                           out_f.write(f"{domain}\n")
-                           print(f"Found: {domain} - A records: {domain_ips}, Additional IPs: {additional_ips}")
+                        if (
+                            not any(ip == target_ip for ip in additional_ips)
+                            and target_ip not in domain_ips
+                        ):
+                            out_f.write(f"{domain}\n")
+                            print(
+                                f"Found: {domain} - A records: {domain_ips}, Additional IPs: {additional_ips}"
+                            )
 
                     else:
                         has_additional = False
 
                 except (dns.exception.Timeout, dns.exception.DNSException):
-                    print(f"Error querying additional section for {domain}: Timeout or other DNS error")
+                    print(
+                        f"Error querying additional section for {domain}: Timeout or other DNS error"
+                    )
 
             except dns.resolver.NXDOMAIN:
                 print(f"Domain not found: {domain}")
@@ -48,10 +60,13 @@ def find_domains_with_additional_section(domains_file, dns_server, target_ip):
 
     return output_file
 
+
 if __name__ == "__main__":
     domains_file = "domains.txt"
     dns_server = "101.101.101.101"
     target_ip = "182.173.0.181"
 
-    output_file_path = find_domains_with_additional_section(domains_file, dns_server, target_ip)
+    output_file_path = find_domains_with_additional_section(
+        domains_file, dns_server, target_ip
+    )
     print(f"Results written to: {output_file_path}")
