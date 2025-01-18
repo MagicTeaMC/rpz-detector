@@ -1,0 +1,11 @@
+[package]
+name = "rpz-detector"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-std = { version = "1.12.0", features = ["attributes"] }
+fasthash = "0.4.0"
+futures = "0.3.28"
+hickory-resolver = { version = "0.24.0", features = ["tokio-runtime"] }
+tokio = { version = "1", features = ["full"] }

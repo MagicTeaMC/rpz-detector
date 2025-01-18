@@ -165,3 +165,7 @@ domains.txt
 matching_domains.txt
 results.txt
 .DS_Store
+
+# Added by cargo
+
+/target

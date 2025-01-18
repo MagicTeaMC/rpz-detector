@@ -13,13 +13,19 @@ TL;DR: Taiwan's website blocking system, especially "RPZ 1.5" is controversial. 
 ## Start Using
 ### Python Script
 1. Create a venv and install requirements.
-2. Clone domains list [here](https://github.com/tb0hdan/domains), and merge it with `merge_datas.py` 
+2. Clone domains list [here](https://github.com/tb0hdan/domains), and merge it with `merge_datas.py`, or use other source  
 3. Check if the domains is still alive with [massdns](https://github.com/blechschmidt/massdns) (optional)
 4. Config to your want in `main.py` (optional)
 5. Run `main.py` then waiting for a while (maybe a day or so)
-### MassDNS
+### Rust Script (Beta)
+2. Clone domains list [here](https://github.com/tb0hdan/domains), and merge it with `merge_datas.py`, or use other source 
+3. Check if the domains is still alive with [massdns](https://github.com/blechschmidt/massdns) (optional)
+4. Config to your want in `src/main.rs` (optional)
+1. Use `cargo build --release` to build a executable file.
+5. Run executable file then waiting for a while.
+### MassDNS (Fast)
 1. Create a venv and install requirements.
-2. Clone domains list [here](https://github.com/tb0hdan/domains), and merge it with `merge_datas.py` 
+2. Clone domains list [here](https://github.com/tb0hdan/domains), and merge it with `merge_datas.py`, or use other source  
 3. Install [massdns](https://github.com/blechschmidt/massdns)
 4. Run `massdns -r resolvers.txt -t A -o S -w results.txt domains.txt`
 4. Use `massdns2list.py` to format the list
