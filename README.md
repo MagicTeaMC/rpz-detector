@@ -9,7 +9,7 @@ TL;DR: Taiwan's website blocking system, especially "RPZ 1.5" is controversial. 
 - <https://blog.ocf.tw/2024/10/ocf_14.html> ([Wayback machine](https://web.archive.org/web/2/https://blog.ocf.tw/2024/10/ocf_14.html))
 - <https://www.facebook.com/seadog007/posts/pfbid02K7KwLyrchHEoWEVbG4bxQCxnLq81Dj6f4ig9Qt5nbGWsgj3zsfXqc9EATgvwo8CUl> ([Wayback machine](https://web.archive.org/web/20230607001325/https://www.facebook.com/seadog007/posts/pfbid02K7KwLyrchHEoWEVbG4bxQCxnLq81Dj6f4ig9Qt5nbGWsgj3zsfXqc9EATgvwo8CUl))
 ## Download RPZ Block List
-> This list is not complete, RPZ blocked more than just these domains. Counting only 2024, RPZ has blocked [at least 30,000 domains.](https://rpz.twnic.tw/e_2.html), so I will use a dataset that record 2.3 billion domains, join our [Telegram channel](https://t.me/rpztw) for early access latest list.  
+> This list is not complete, RPZ blocked more than just these domains. Counting only 2024, RPZ has blocked [at least 30,000 domains.](https://rpz.twnic.tw/e_2.html).  
 
 [rpz-block-list.txt](https://github.com/MagicTeaMC/rpz-detector/blob/main/rpz-block-list.txt)  
 This block list can be use at anywhere for any legal purpose.  
