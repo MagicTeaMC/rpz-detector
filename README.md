@@ -1,5 +1,5 @@
 # RPZ Detector
-A public TWNIC's RPZ block list for everyone, open forever.  
+A public TWNIC's RPZ block list for everyone.  
 ## Purpose and Background
 ### RPZ Controversy
 TL;DR: Taiwan's website blocking system, especially "RPZ 1.5" is controversial. It allows quick blocking without court approval, lacks transparency, and has a history of errors (it used to block some popular domains such as eu.org, Polymarket.com, VK.com, WordPress.com and Instagram.com), raising concerns about potential abuse and the restriction of digital rights. The new law further legitimizes this process, sparking fears of unchecked government power online.
