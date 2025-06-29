@@ -2,7 +2,7 @@ import glob
 import os
 
 
-def merge_datas(data_path="domains/data/", output_filename="domains.txt"):
+def merge_datas(data_path="downloads/temp/", output_filename="domains.txt"):
     """
     Merges all .txt files found in the specified directory patterns within the given data_path:
     - data_path/*/*.txt

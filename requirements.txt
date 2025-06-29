@@ -1,2 +1,4 @@
 aiodns
 dnspython
+requests
+beautifulsoup4
