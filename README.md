@@ -1,8 +1,6 @@
 # RPZ Detector
-To make a public RPZ block list for everyone, open forever.  
+A public TWNIC's RPZ block list for everyone, open forever.  
 ## Purpose and Background
-### About RPZ
-TWNIC's implementation of RPZ is an effective DNS-based defense mechanism that significantly enhances network security by blocking malicious domain names at the DNS level. It serves as a vital part of the network infrastructure, contributing to a safer and more reliable internet environment for users in Taiwan. By filtering out known threats before they can reach users, RPZ helps protect individuals and organizations from a wide range of cyber threats.
 ### RPZ Controversy
 TL;DR: Taiwan's website blocking system, especially "RPZ 1.5" is controversial. It allows quick blocking without court approval, lacks transparency, and has a history of errors (it used to block some popular domains such as eu.org, Polymarket.com and Instagram.com), raising concerns about potential abuse and the restriction of digital rights. The new law further legitimizes this process, sparking fears of unchecked government power online.
 #### More Info About It:
