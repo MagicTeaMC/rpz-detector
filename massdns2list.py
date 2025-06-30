@@ -11,14 +11,13 @@ def filter_domains_from_file(filepath, output_filepath):
     except FileNotFoundError:
         print(f"Error: File not found at {filepath}")
         return
-
+    
     try:
-        with open(output_filepath, "w") as outfile:
+        with open(output_filepath, "a") as outfile:  # Changed from "w" to "a" for append mode
             for domain in filtered_domains:
                 outfile.write(domain + "\n")
     except Exception as e:
         print(f"Error writing to output file: {e}")
-
 
 # config
 filepath = "results.txt"
