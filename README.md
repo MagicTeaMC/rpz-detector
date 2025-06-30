@@ -12,6 +12,8 @@ TL;DR: Taiwan's website blocking system, especially "RPZ 1.5" is controversial. 
 [rpz-block-list.txt](https://github.com/MagicTeaMC/rpz-detector/blob/main/rpz-block-list.txt)  
 This block list can be use at anywhere for any legal purpose.  
 ## Start Using
+These scripts are unstable and weird, not recommend to use it.  
+If you wanna give it a try, here you go:
 ### Python Script
 1. Create a venv and install requirements.
 2. Clone domains list [here](https://github.com/tb0hdan/domains), and merge it with `merge_datas.py`, or use other source  
