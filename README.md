@@ -33,6 +33,6 @@ If you wanna give it a try, here you go:
 4. Run `massdns -r resolvers.txt -t A -o S -w results.txt domains.txt`
 4. Use `massdns2list.py` to format the list
 ## Domains source
-- Worldwide: <https://ipsniper.info/domaincount.html>, <https://github.com/tb0hdan/domains> (except .ru)
+- Worldwide: <https://ipsniper.info/domaincount.html>, <https://github.com/tb0hdan/domains> (except .ru), <https://tranco-list.eu/list/L78V4/1000000>
 - .RU: <https://github.com/2naive/top_ru_domains_nameservers_list/blob/main/ru_alexa_top1m.txt>
 - Top 17m list: <https://github.com/lkarlslund/topdomains>
