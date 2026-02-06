@@ -3,7 +3,7 @@ def filter_domains_from_file(filepath, output_filepath):
     try:
         with open(filepath, "r") as f:
             for line in f:
-                if "182.173.0.181" in line or "34.81.109.65" in line:
+                if "182.173.0.181" in line or "34.102.218.71" in line:
                     parts = line.split()
                     if len(parts) >= 3:
                         domain = parts[0].rstrip(".")
